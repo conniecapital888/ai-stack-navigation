@@ -9,13 +9,15 @@ document.querySelector("[data-menu-toggle]")?.addEventListener("click", (event) 
 function applyContactDetails() {
   const email = window.AI_STACK_CONFIG?.contactEmail;
   document.querySelectorAll("[data-contact-email]").forEach((link) => {
+    const label = link.querySelector("span") || link;
     if (!email) {
-      link.textContent = "商务邮箱待绑定";
+      label.textContent = "商务邮箱待绑定";
       link.classList.add("not-configured");
       link.removeAttribute("href");
       return;
     }
-    link.textContent = email;
+    label.textContent = email;
+    link.classList.remove("not-configured");
     link.href = `mailto:${email}`;
   });
   document.querySelectorAll("[data-subject]").forEach((link) => {

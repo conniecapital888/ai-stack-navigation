@@ -38,6 +38,7 @@ const tools = [
 ];
 
 const categories = ["全部", "对话写作", "搜索研究", "图像设计", "编程开发", "办公效率", "视频音频", "语言学习", "自动化", "营销增长"];
+const siteConfig = window.AI_STACK_CONFIG || {};
 const state = { category: "全部", query: "", sort: "featured", favoritesOnly: false, visible: 12 };
 const storageKey = "ai-stack-favorites";
 let favorites = new Set(JSON.parse(localStorage.getItem(storageKey) || "[]"));
@@ -55,9 +56,15 @@ function logoMarkup(tool) {
   return `<span class="tool-logo-wrap"><img class="tool-logo" src="${iconUrl(tool.domain)}" alt="" width="27" height="27" loading="lazy" data-logo><span class="tool-logo-fallback" hidden>${tool.name.charAt(0)}</span></span>`;
 }
 
+function toolLink(tool) {
+  const affiliateUrl = siteConfig.affiliateLinks?.[tool.id];
+  return { url: affiliateUrl || tool.url, affiliate: Boolean(affiliateUrl) };
+}
+
 function toolCard(tool) {
   const saved = favorites.has(tool.id);
   const priceClass = tool.price === "付费" ? "price-paid" : "price-free";
+  const destination = toolLink(tool);
   return `<article class="tool-card">
     <div class="tool-top">
       <div class="tool-id">${logoMarkup(tool)}<div class="tool-name"><h3>${tool.name}</h3><span>${tool.category}</span></div></div>
@@ -65,16 +72,17 @@ function toolCard(tool) {
     </div>
     <p class="tool-description">${tool.description}</p>
     <div class="tool-footer">
-      <div class="tool-tags"><span class="tag ${priceClass}">${tool.price}</span><span class="tag">${tool.tags[0]}</span></div>
-      <a class="card-link" href="${tool.url}" target="_blank" rel="noopener noreferrer">访问 <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+      <div class="tool-tags"><span class="tag ${priceClass}">${tool.price}</span><span class="tag">${tool.tags[0]}</span>${destination.affiliate ? '<span class="tag commercial-label">推广</span>' : ""}</div>
+      <a class="card-link" href="${destination.url}" target="_blank" rel="${destination.affiliate ? "sponsored " : ""}noopener noreferrer" data-outbound-tool="${tool.id}" data-affiliate="${destination.affiliate}">访问 <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
     </div>
   </article>`;
 }
 
 function featuredCard(tool) {
-  return `<a class="featured-card" href="${tool.url}" target="_blank" rel="noopener noreferrer">
+  const destination = toolLink(tool);
+  return `<a class="featured-card" href="${destination.url}" target="_blank" rel="${destination.affiliate ? "sponsored " : ""}noopener noreferrer" data-outbound-tool="${tool.id}" data-affiliate="${destination.affiliate}">
     <div class="tool-top"><div class="tool-id">${logoMarkup(tool)}<div class="tool-name"><h3>${tool.name}</h3><span>${tool.category}</span></div></div><span class="tag ${tool.price === "付费" ? "price-paid" : "price-free"}">${tool.price}</span></div>
-    <h3>${tool.name}</h3><p>${tool.description}</p><span class="card-link">打开工具 <i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
+    <h3>${tool.name}</h3><p>${tool.description}</p><span class="card-link">打开工具${destination.affiliate ? ' <small class="affiliate-note">推广</small>' : ""} <i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
   </a>`;
 }
 
@@ -135,7 +143,29 @@ function resetFilters() {
 }
 
 function setupAds() {
-  const config = window.AI_STACK_CONFIG || {};
+  const config = siteConfig;
+  document.querySelectorAll("[data-ad-position]").forEach((container) => {
+    const position = container.dataset.adPosition;
+    const directAd = config.directAds?.[position];
+    if (!directAd?.title || !directAd?.url) return;
+
+    const placeholder = container.querySelector(".ad-placeholder");
+    if (!placeholder) return;
+    const copy = document.createElement("div");
+    const title = document.createElement("strong");
+    const description = document.createElement("span");
+    const link = document.createElement("a");
+    title.textContent = directAd.title;
+    description.textContent = directAd.description || directAd.brand || "赞助合作";
+    link.href = directAd.url;
+    link.target = "_blank";
+    link.rel = "sponsored noopener noreferrer";
+    link.dataset.trackEvent = `direct_ad:${position}:${directAd.campaign || directAd.brand || directAd.title}`;
+    link.textContent = directAd.cta || "了解详情";
+    copy.append(title, description);
+    placeholder.replaceChildren(copy, link);
+  });
+
   if (!config.adSenseClient) return;
   const script = document.createElement("script");
   script.async = true;
@@ -143,6 +173,7 @@ function setupAds() {
   script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${encodeURIComponent(config.adSenseClient)}`;
   document.head.appendChild(script);
   document.querySelectorAll("[data-ad-position]").forEach((container) => {
+    if (config.directAds?.[container.dataset.adPosition]) return;
     const slot = config.adSlots?.[container.dataset.adPosition];
     if (!slot) return;
     container.querySelector(".ad-placeholder")?.remove();
