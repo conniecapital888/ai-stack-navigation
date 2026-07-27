@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0d0f" />
+    <meta name="description" content="AI 栈是一个简洁、可信的中文 AI 工具导航，按写作、设计、编程、视频、效率等场景精选实用工具。" />
+    <meta name="keywords" content="AI工具,AI导航,人工智能工具,ChatGPT,AI写作,AI绘画,AI编程" />
+    <meta property="og:title" content="AI 栈 - 找到真正好用的 AI 工具" />
+    <meta property="og:description" content="精选 AI 工具，按真实使用场景分类。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://conniecapital888.github.io/ai-stack-navigation/" />
+    <title>AI 栈 - 中文 AI 工具导航</title>
+    <link rel="canonical" href="https://conniecapital888.github.io/ai-stack-navigation/" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preconnect" href="https://www.google.com" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AI 栈",
+        "description": "按场景精选的中文 AI 工具导航",
+        "url": "https://conniecapital888.github.io/ai-stack-navigation/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://conniecapital888.github.io/ai-stack-navigation/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="AI 栈首页">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>AI 栈</span>
+        </a>
+        <nav class="top-nav" aria-label="主导航">
+          <a href="#directory">工具库</a>
+          <a href="about.html">关于</a>
+          <a class="nav-cta" href="advertise.html">广告合作</a>
+        </nav>
+        <button class="icon-button mobile-menu" type="button" aria-label="打开导航" title="打开导航" data-menu-toggle>
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="status-dot"></span> 每周人工筛选更新</p>
+            <h1>AI 栈</h1>
+            <p class="hero-lede">找到真正好用的 AI 工具。</p>
+            <p class="hero-note">按创作、编程、办公与增长场景整理，少一点选择疲劳，多一点实际产出。</p>
+          </div>
+          <div class="search-panel">
+            <form class="search-form" role="search" data-search-form>
+              <i data-lucide="search" aria-hidden="true"></i>
+              <input id="tool-search" type="search" autocomplete="off" placeholder="搜索工具、用途或分类" aria-label="搜索 AI 工具" />
+              <button class="clear-search" type="button" aria-label="清空搜索" title="清空" data-clear-search hidden>
+                <i data-lucide="x" aria-hidden="true"></i>
+              </button>
+            </form>
+            <div class="quick-links" aria-label="热门搜索">
+              <span>热门</span>
+              <button type="button" data-quick-search="写作">AI 写作</button>
+              <button type="button" data-quick-search="编程">编程</button>
+              <button type="button" data-quick-search="视频">视频生成</button>
+            </div>
+          </div>
+        </div>
+        <div class="hero-stats" aria-label="站点统计">
+          <div><strong data-tool-total>36</strong><span>精选工具</span></div>
+          <div><strong>9</strong><span>实用分类</span></div>
+          <div><strong>周更</strong><span>持续维护</span></div>
+        </div>
+      </section>
+
+      <aside class="ad-shell ad-leaderboard" aria-label="广告" data-ad-position="leaderboard">
+        <span class="ad-label">广告</span>
+        <div class="ad-placeholder">
+          <div>
+            <strong>让对的 AI 用户看见你</strong>
+            <span>首页品牌广告位 · 970 × 90</span>
+          </div>
+          <a href="advertise.html">了解合作 <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+        </div>
+      </aside>
+
+      <section class="featured-section" aria-labelledby="featured-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">编辑精选</p>
+            <h2 id="featured-title">本周值得一试</h2>
+          </div>
+          <p>从易用性、完成度与实际价值出发，每周挑选。</p>
+        </div>
+        <div class="featured-grid" data-featured-grid></div>
+      </section>
+
+      <section class="directory-section" id="directory" aria-labelledby="directory-title">
+        <div class="directory-head">
+          <div>
+            <p class="section-kicker">工具目录</p>
+            <h2 id="directory-title">按工作场景探索</h2>
+          </div>
+          <button class="favorites-toggle" type="button" data-favorites-toggle aria-pressed="false">
+            <i data-lucide="heart" aria-hidden="true"></i>
+            <span>我的收藏</span>
+            <b data-favorite-count>0</b>
+          </button>
+        </div>
+        <div class="category-tabs" role="tablist" aria-label="工具分类" data-category-tabs></div>
+        <div class="results-bar">
+          <p data-result-count aria-live="polite">显示全部工具</p>
+          <label class="sort-control">
+            <span>排序</span>
+            <select data-sort aria-label="工具排序">
+              <option value="featured">综合推荐</option>
+              <option value="name">名称 A-Z</option>
+              <option value="newest">最近收录</option>
+            </select>
+            <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </label>
+        </div>
+        <div class="tool-grid" data-tool-grid></div>
+        <div class="empty-state" data-empty-state hidden>
+          <i data-lucide="search-x" aria-hidden="true"></i>
+          <h3>没有找到匹配的工具</h3>
+          <p>试试更短的关键词，或切换到其他分类。</p>
+          <button type="button" data-reset-filters>查看全部工具</button>
+        </div>
+        <button class="load-more" type="button" data-load-more>
+          <span>查看更多工具</span>
+          <i data-lucide="chevron-down" aria-hidden="true"></i>
+        </button>
+      </section>
+
+      <aside class="ad-shell ad-inline" aria-label="广告" data-ad-position="inline">
+        <span class="ad-label">广告</span>
+        <div class="ad-placeholder">
+          <div>
+            <strong>面向中文 AI 使用者展示产品</strong>
+            <span>原生内容位 · 支持新品发布与长期品牌合作</span>
+          </div>
+          <a href="advertise.html">查看广告方案 <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </aside>
+
+      <section class="submit-band">
+        <div>
+          <p class="section-kicker">共同完善目录</p>
+          <h2>发现了值得分享的 AI 工具？</h2>
+          <p>我们会逐一体验，不按提交顺序收录，也不出售自然排名。</p>
+        </div>
+        <a class="button-secondary" href="advertise.html#submit">提交工具 <i data-lucide="send" aria-hidden="true"></i></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div>
+          <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>AI 栈</span></a>
+          <p>为中文用户整理真正有用的 AI 工具。</p>
+        </div>
+        <div class="footer-links">
+          <div><strong>站点</strong><a href="about.html">关于我们</a><a href="advertise.html">广告合作</a></div>
+          <div><strong>规则</strong><a href="privacy.html">隐私政策</a><a href="terms.html">使用条款</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 AI 栈</span><span>独立筛选 · 清晰标注广告</span></div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+    <script src="config.js"></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

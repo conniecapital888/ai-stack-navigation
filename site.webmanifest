@@ -1,0 +1,9 @@
+{
+  "name": "AI 栈",
+  "short_name": "AI 栈",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0d0f",
+  "theme_color": "#0b0d0f",
+  "icons": []
+}

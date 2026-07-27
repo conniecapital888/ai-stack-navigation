@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://conniecapital888.github.io/ai-stack-navigation/sitemap.xml
