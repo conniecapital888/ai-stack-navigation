@@ -1,0 +1,18 @@
+# AI 栈
+
+> AI 栈是一个面向中文用户的 AI 工具导航与使用指南站点，按写作、设计、编程、视频、效率等真实工作场景整理工具。
+
+## 主要页面
+
+- [工具导航](https://conniecapital888.github.io/ai-stack-navigation/): 36 款 AI 工具，覆盖 9 个分类。
+- [使用指南](https://conniecapital888.github.io/ai-stack-navigation/guides.html): AI 工具选型与工作流文章。
+- [AI 写作工具指南](https://conniecapital888.github.io/ai-stack-navigation/ai-writing-tools.html): ChatGPT、Claude 与 Gemini 的适用场景。
+- [AI 编程工具指南](https://conniecapital888.github.io/ai-stack-navigation/ai-coding-tools.html): Cursor、GitHub Copilot、Windsurf、Replit Agent 与 v0 的任务差异。
+- [AI 视频工具指南](https://conniecapital888.github.io/ai-stack-navigation/ai-video-tools.html): Runway、HeyGen、ElevenLabs、Descript 与 Suno 的制作场景。
+- [关于 AI 栈](https://conniecapital888.github.io/ai-stack-navigation/about.html): 收录标准和编辑原则。
+
+## 编辑原则
+
+- 所有广告和推广内容均清晰标注。
+- 付费合作不改变自然目录排序。
+- 工具信息以公开功能与实际使用场景为依据，不保证第三方服务持续可用。

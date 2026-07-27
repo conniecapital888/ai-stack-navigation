@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>AI 栈指南更新</title>
+    <link>https://conniecapital888.github.io/ai-stack-navigation/</link>
+    <description>面向中文用户的 AI 工具选择与使用指南。</description>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 27 Jul 2026 00:00:00 +0800</lastBuildDate>
+    <item>
+      <title>AI 写作工具怎么选：ChatGPT、Claude 与 Gemini</title>
+      <link>https://conniecapital888.github.io/ai-stack-navigation/ai-writing-tools.html</link>
+      <guid>https://conniecapital888.github.io/ai-stack-navigation/ai-writing-tools.html</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0800</pubDate>
+      <description>从日常写作、长文处理和资料整合三个场景比较常用 AI 写作工具。</description>
+    </item>
+    <item>
+      <title>AI 编程工具推荐：按开发任务选择</title>
+      <link>https://conniecapital888.github.io/ai-stack-navigation/ai-coding-tools.html</link>
+      <guid>https://conniecapital888.github.io/ai-stack-navigation/ai-coding-tools.html</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0800</pubDate>
+      <description>比较编辑器、代码助手、应用生成和前端原型工具的适用任务。</description>
+    </item>
+    <item>
+      <title>AI 视频工具推荐：生成、数字人与剪辑</title>
+      <link>https://conniecapital888.github.io/ai-stack-navigation/ai-video-tools.html</link>
+      <guid>https://conniecapital888.github.io/ai-stack-navigation/ai-video-tools.html</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0800</pubDate>
+      <description>根据生成视频、数字人讲解、配音和后期剪辑等目标选择工具。</description>
+    </item>
+  </channel>
+</rss>

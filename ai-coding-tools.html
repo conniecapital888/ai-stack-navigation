@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0d0f" />
+    <meta name="description" content="AI 编程工具推荐与选择指南：比较 Cursor、GitHub Copilot、Windsurf、Replit Agent 和 v0 在代码补全、多文件修改、原型与部署中的分工。" />
+    <meta property="og:title" content="AI 编程工具推荐：按开发任务选择" />
+    <meta property="og:description" content="按代码补全、多文件修改、应用生成和前端原型任务选择 AI 编程工具。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://conniecapital888.github.io/ai-stack-navigation/ai-coding-tools.html" />
+    <meta name="twitter:card" content="summary" />
+    <title>AI 编程工具推荐：Cursor、Copilot、Windsurf、Replit 与 v0 - AI 栈</title>
+    <link rel="canonical" href="https://conniecapital888.github.io/ai-stack-navigation/ai-coding-tools.html" />
+    <link rel="alternate" type="application/rss+xml" title="AI 栈指南更新" href="rss.xml" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AI 编程工具推荐：按开发任务选择",
+        "description": "比较五款 AI 编程工具在代码补全、多文件修改、应用生成和前端原型中的分工。",
+        "datePublished": "2026-07-27",
+        "dateModified": "2026-07-27",
+        "inLanguage": "zh-CN",
+        "author": { "@type": "Organization", "name": "AI 栈" },
+        "publisher": { "@type": "Organization", "name": "AI 栈" },
+        "mainEntityOfPage": "https://conniecapital888.github.io/ai-stack-navigation/ai-coding-tools.html"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="site-header"><div class="nav-shell"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>AI 栈</span></a><nav class="top-nav" aria-label="主导航"><a href="index.html#directory">工具库</a><a href="guides.html" aria-current="page">指南</a><a href="about.html">关于</a><a class="nav-cta" href="advertise.html">广告合作</a></nav><button class="icon-button mobile-menu" type="button" aria-label="打开导航" title="打开导航" data-menu-toggle><i data-lucide="menu" aria-hidden="true"></i></button></div></header>
+    <main class="guide-main" id="main">
+      <header class="guide-hero">
+        <p class="section-kicker">编程开发</p>
+        <h1>AI 编程工具推荐：按开发任务选择</h1>
+        <p>AI 编辑器、代码助手和应用生成器解决的并不是同一个问题。先判断你要修改现有代码，还是从想法快速得到可运行原型。</p>
+        <div class="guide-meta"><span>更新于 2026 年 7 月 27 日</span><span>约 8 分钟阅读</span><span>AI 栈编辑整理</span></div>
+      </header>
+      <div class="article-layout">
+        <article class="article-body">
+          <p class="article-lede">选择 AI 编程工具时，最有用的分界不是“会不会写代码”，而是代码库是否已经存在、修改范围有多大，以及结果是否需要直接部署。</p>
+
+          <h2 id="quick-answer">按任务快速选择</h2>
+          <ul>
+            <li><strong>理解和修改现有代码库：</strong>Cursor 围绕代码库理解、补全、问答与代理式编程设计。</li>
+            <li><strong>保留熟悉的编辑器与 GitHub 工作流：</strong>GitHub Copilot 可融入主流编辑器和 GitHub 协作流程。</li>
+            <li><strong>连续处理多文件任务：</strong>Windsurf 强调多文件协作和连续上下文。</li>
+            <li><strong>从自然语言生成并部署应用：</strong>Replit Agent 更适合快速制作原型。</li>
+            <li><strong>生成网页界面与 React 代码：</strong>v0 更适合前端界面和 UI 原型。</li>
+          </ul>
+
+          <h2 id="comparison">五款工具的主要分工</h2>
+          <div class="comparison-table">
+            <table>
+              <thead><tr><th>工具</th><th>核心场景</th><th>适合谁先试</th><th>验证重点</th></tr></thead>
+              <tbody>
+                <tr><td>Cursor</td><td>代码库问答、补全、跨文件修改</td><td>经常维护已有项目的开发者</td><td>审查改动范围和依赖影响</td></tr>
+                <tr><td>GitHub Copilot</td><td>编辑器内代码建议与 GitHub 工作流</td><td>希望保留现有开发环境的团队</td><td>检查建议是否符合项目规范</td></tr>
+                <tr><td>Windsurf</td><td>带连续上下文的代理式开发</td><td>需要连续完成多步骤修改的人</td><td>每一步都运行测试并看差异</td></tr>
+                <tr><td>Replit Agent</td><td>从想法生成并部署应用</td><td>要快速验证产品概念的人</td><td>确认数据、权限和部署配置</td></tr>
+                <tr><td>v0</td><td>网页界面和 React 原型</td><td>产品、设计与前端开发者</td><td>检查响应式、可访问性和组件状态</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="workflow">让 AI 改代码的稳妥流程</h2>
+          <ol>
+            <li><strong>限定范围：</strong>说明目标文件、不能改动的接口、支持环境和验收条件。</li>
+            <li><strong>先让它读取：</strong>要求工具概括相关模块和调用关系，再提出修改方案。</li>
+            <li><strong>小步提交：</strong>一次解决一个行为变化，避免功能、重构和依赖升级混在一起。</li>
+            <li><strong>看实际差异：</strong>逐行检查变更，不只阅读工具给出的总结。</li>
+            <li><strong>运行验证：</strong>执行已有测试、构建和静态检查，并手动走一遍关键用户流程。</li>
+          </ol>
+          <div class="article-note"><strong>代码能运行不等于可以上线</strong><p>认证、支付、隐私数据、文件上传和权限控制需要额外审查。AI 生成的依赖名称、API 用法和配置项也可能过时或不存在。</p></div>
+
+          <h2 id="existing-project">已有项目和新原型的选择不同</h2>
+          <h3>已有项目</h3>
+          <p>已有项目通常包含本地规范、历史约束和隐含接口。优先选择能理解整个代码库、查看差异并配合测试的工具。提示中要给出复现步骤与预期结果，而不是只描述“页面坏了”。</p>
+          <h3>新原型</h3>
+          <p>从零开始时，可以先用应用生成或 UI 生成工具确认流程与布局，再决定技术栈和数据结构。原型验证的是需求，不应自动被当成生产系统；上线前仍要补齐错误状态、安全配置、移动端适配和真实数据。</p>
+
+          <h2 id="review">人工审查清单</h2>
+          <ul>
+            <li>是否意外删除、覆盖或公开了数据。</li>
+            <li>是否引入没有必要的新依赖，或调用不存在的 API。</li>
+            <li>是否覆盖空数据、加载失败、权限不足和网络中断状态。</li>
+            <li>是否在桌面端和移动端保持可用。</li>
+            <li>是否有针对本次行为变化的测试或可重复验证步骤。</li>
+          </ul>
+
+          <div class="article-note"><strong>继续探索</strong><p>前往 <a href="index.html?q=编程">AI 栈编程工具目录</a>查看这五款工具的入口和简要说明。</p></div>
+          <section class="related-guides">
+            <h2>相关指南</h2>
+            <div class="related-links"><a href="ai-writing-tools.html"><span>AI 写作工具怎么选</span><i data-lucide="arrow-right" aria-hidden="true"></i></a><a href="ai-video-tools.html"><span>AI 视频工具推荐</span><i data-lucide="arrow-right" aria-hidden="true"></i></a></div>
+          </section>
+        </article>
+        <aside class="article-toc" aria-label="文章目录"><strong>本文目录</strong><a href="#quick-answer">快速选择</a><a href="#comparison">工具分工</a><a href="#workflow">修改流程</a><a href="#existing-project">项目类型</a><a href="#review">审查清单</a></aside>
+      </div>
+    </main>
+    <footer class="site-footer"><div class="footer-main"><div><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>AI 栈</span></a><p>为中文用户整理真正有用的 AI 工具。</p></div><div class="footer-links"><div><strong>站点</strong><a href="guides.html">全部指南</a><a href="index.html#directory">工具库</a></div><div><strong>合作</strong><a href="advertise.html">广告合作</a><a href="media-kit.html">媒体资料</a></div></div></div><div class="footer-bottom"><span>© 2026 AI 栈</span><span><a href="privacy.html">隐私政策</a> · <a href="terms.html">使用条款</a></span></div></footer>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script><script src="config.js"></script><script src="analytics.js" defer></script><script src="page.js" defer></script>
+  </body>
+</html>
