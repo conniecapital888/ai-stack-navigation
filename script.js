@@ -34,7 +34,8 @@ const tools = [
   { id: "n8n", name: "n8n", category: "自动化", domain: "n8n.io", url: "https://n8n.io/", price: "免费起", added: 4, description: "可自托管的工作流自动化平台，支持 AI 节点和灵活代码扩展。", tags: ["开源", "自托管"] },
   { id: "bardeen", name: "Bardeen", category: "自动化", domain: "bardeen.ai", url: "https://www.bardeen.ai/", price: "免费起", added: 3, description: "把浏览器中的重复操作变成自动化流程，适合销售和研究。", tags: ["浏览器", "销售"] },
   { id: "copyai", name: "Copy.ai", category: "营销增长", domain: "copy.ai", url: "https://www.copy.ai/", price: "免费起", added: 2, description: "围绕销售与营销流程生成内容，并支持团队化工作流。", tags: ["营销", "文案"] },
-  { id: "jasper", name: "Jasper", category: "营销增长", domain: "jasper.ai", url: "https://www.jasper.ai/", price: "付费", added: 1, description: "面向品牌团队的 AI 营销平台，强调语调一致与内容协作。", tags: ["品牌", "内容"] }
+  { id: "jasper", name: "Jasper", category: "营销增长", domain: "jasper.ai", url: "https://www.jasper.ai/", price: "付费", added: 1, description: "面向品牌团队的 AI 营销平台，强调语调一致与内容协作。", tags: ["品牌", "内容"] },
+  {"id": "agent-qa", "name": "agent-qa", "category": "编程开发", "domain": "vostride.com", "url": "https://www.vostride.com/", "price": "模型费用另计", "added": 37, "description": "vostride 的网页与移动端 AI 测试工具，结合 memidex 持久记忆、经验证的自我改进与可复查证据。支持 CLI/MCP。", "tags": ["QA", "MCP", "持久记忆"]}
 ];
 
 const categories = ["全部", "对话写作", "搜索研究", "图像设计", "编程开发", "办公效率", "视频音频", "语言学习", "自动化", "营销增长"];
